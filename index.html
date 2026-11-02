@@ -350,14 +350,14 @@ footer .logo{color:#fff}footer p{margin:.3em 0;color:#cdbfd8}
 const NUM="5521965019396";
 const wa=m=>`https://wa.me/${NUM}?text=${encodeURIComponent(m)}`;
 const S=[
- ["💅","Manicure","Cuidado das unhas das mãos, com cutículas, lixamento e esmaltação."],
- ["🦶","Pedicure","Cuidado das unhas e da pele dos pés, com remoção de cutículas e esmaltação."],
- ["✨","Mão e pé","Os dois serviços no mesmo atendimento."],
- ["💎","Esmaltação em gel","Acabamento com brilho e boa duração."],
- ["🎀","Decoração simples","Adesivos, francesinha e detalhes."],
- ["🌸","Outro serviço","Conte o que você precisa e eu te digo se consigo atender."]
+ ["💅","Manicure","Cuidado das unhas das mãos, com cutículas, lixamento e esmaltação.","a partir de R$ 35"],
+ ["🦶","Pedicure","Cuidado das unhas e da pele dos pés, com remoção de cutículas e esmaltação.","a partir de R$ 35"],
+ ["✨","Mão e pé","Os dois serviços no mesmo atendimento.","a partir de R$ 60"],
+ ["💎","Esmaltação em gel","Acabamento com brilho e boa duração.","a partir de R$ 70"],
+ ["🎀","Decoração simples","Adesivos, francesinha e detalhes.","a partir de R$ 10"],
+ ["🌸","Outro serviço","Conte o que você precisa e eu te digo se consigo atender.","valor sob consulta"]
 ];
-document.getElementById("servs").innerHTML=S.map((s,i)=>`<article class="card rv" style="--d:${(i%3)*.08}s"><div class="ic">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p><div class="meta"><span>⏱ XX min · a partir de R$ XX</span><a data-wa="Oi! Quero agendar ${s[1]}. Quais horários você tem?" href="#">Agendar</a></div></article>`).join("");
+document.getElementById("servs").innerHTML=S.map((s,i)=>`<article class="card rv" style="--d:${(i%3)*.08}s"><div class="ic">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p><div class="meta"><span>${s[3]}</span><a data-wa="Oi! Quero agendar ${s[1]}. Quais horários você tem?" href="#">Agendar</a></div></article>`).join("");
 const F=[
  ["Quais regiões você atende?","Atendo em [bairros/cidades]. Se o seu endereço não estiver na lista, me chame que eu verifico se consigo ir até você."],
  ["Existe taxa de deslocamento?","[Informe aqui: deslocamento incluso no valor ou taxa conforme a distância, avisada antes de agendar.]"],
